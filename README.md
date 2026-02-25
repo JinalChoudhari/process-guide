@@ -1,11 +1,50 @@
+```md
+# Process Guide - Quick Start (2 Minutes)
 
-  # Process Guide System Overview
+## Requirements
+- Node.js 18+ (recommended: 20)
+- XAMPP (Apache + MySQL running)
 
-  This is a code bundle for Process Guide System Overview. The original project is available at https://www.figma.com/design/Wnr0FQdip2PqyGwCdWySN4/Process-Guide-System-Overview.
+## 1) Start Backend (XAMPP)
+1. Open XAMPP Control Panel.
+2. Start:
+- Apache
+- MySQL
 
-  ## Running the code
+## 2) Create Database Tables
+Open this once in browser:
 
-  Run `npm i` to install the dependencies.
+- `http://localhost/processguide/api/setup_database.php`
 
-  Run `npm run dev` to start the development server.
-  
+If your folder name is different, replace `processguide` with your folder.
+
+## 3) Start Frontend
+```bash
+cd process-guide-frontend
+npm install
+npm run dev
+```
+
+Frontend URL:
+- `http://localhost:3000`
+
+## 4) Set API URL (if needed)
+Create `process-guide-frontend/.env`:
+
+```env
+VITE_API_BASE_URL=http://localhost/processguide/api
+```
+
+Then restart:
+```bash
+npm run dev
+```
+
+## 5) Login
+- Username: `admin`
+- Password: `admin123`
+
+## Quick Checks
+- API DB check: `http://localhost/processguide/api/check_db.php`
+- Processes API: `http://localhost/processguide/api/processes.php`
+```
