@@ -36,8 +36,8 @@ export function initializeDatabase(): void {
     // Create default admin account
     const defaultAdmin: Admin = {
       id: 'admin-1',
-      username: 'admin',
-      password: 'admin123', // In production, this should be hashed
+      username: 'TatamotorsSDC',
+      password: 'sdc@2026', // In production, this should be hashed
       email: 'admin@processguide.com',
       createdAt: new Date().toISOString(),
     };

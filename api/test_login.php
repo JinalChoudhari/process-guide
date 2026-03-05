@@ -33,8 +33,8 @@ try {
 
 // Test login
 try {
-    $username = 'admin';
-    $password = 'admin123';
+    $username = 'TatamotorsSDC';
+    $password = 'sdc@2026';
     
     $stmt = $pdo->prepare("SELECT * FROM admins WHERE username = ? AND password = ?");
     $stmt->execute([$username, $password]);
@@ -50,3 +50,4 @@ try {
     echo "Login test error: " . $e->getMessage() . "<br>";
 }
 ?>
+

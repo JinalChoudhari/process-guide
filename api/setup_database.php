@@ -51,10 +51,12 @@ try {
     
     // Insert default admin
     $stmt = $pdo->prepare("INSERT IGNORE INTO admins (id, username, password, email) VALUES (?, ?, ?, ?)");
-    $stmt->execute(['admin-1', 'admin', 'admin123', 'admin@processguide.com']);
-    echo "Default admin created (username: admin, password: admin123)\n";
+    $stmt->execute(['admin-1', 'TatamotorsSDC', 'sdc@2026', 'admin@processguide.com']);
+    echo "Default admin created (username: TatamotorsSDC, password: sdc@2026)\n";
     
 } catch (PDOException $e) {
     echo "Error creating tables: " . $e->getMessage();
 }
 ?>
+
+

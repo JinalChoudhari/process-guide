@@ -24,10 +24,10 @@ try {
         if ($count == 0) {
             // Insert admin
             $stmt = $pdo->prepare("INSERT INTO admins (id, username, password, email) VALUES (?, ?, ?, ?)");
-            $stmt->execute(['admin-1', 'admin', 'admin123', 'admin@processguide.com']);
+            $stmt->execute(['admin-1', 'TatamotorsSDC', 'sdc@2026', 'admin@processguide.com']);
             echo "Admin INSERTED successfully!<br>";
-            echo "Username: admin<br>";
-            echo "Password: admin123<br>";
+            echo "Username: TatamotorsSDC<br>";
+            echo "Password: sdc@2026<br>";
         } else {
             // Show existing admins
             $stmt = $pdo->query("SELECT id, username, password FROM admins");
@@ -82,7 +82,7 @@ try {
         
         // Insert admin
         $stmt = $pdo->prepare("INSERT INTO admins (id, username, password, email) VALUES (?, ?, ?, ?)");
-        $stmt->execute(['admin-1', 'admin', 'admin123', 'admin@processguide.com']);
+        $stmt->execute(['admin-1', 'TatamotorsSDC', 'sdc@2026', 'admin@processguide.com']);
         echo "Admin created!<br>";
     }
     
@@ -90,3 +90,4 @@ try {
     echo "ERROR: " . $e->getMessage();
 }
 ?>
+

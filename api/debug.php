@@ -27,9 +27,9 @@ foreach ($admins as $admin) {
 echo "<br>";
 
 // Test login manually
-echo "4. Testing login with admin/admin123:<br>";
+echo "4. Testing login with TatamotorsSDC/sdc@2026:<br>";
 $stmt = $pdo->prepare("SELECT * FROM admins WHERE username = ? AND password = ?");
-$stmt->execute(['admin', 'admin123']);
+$stmt->execute(['TatamotorsSDC', 'sdc@2026']);
 $result = $stmt->fetch();
 if ($result) {
     echo "   SUCCESS! Login works.<br>";
@@ -40,10 +40,11 @@ if ($result) {
     echo "<br>5. Attempting to insert admin...<br>";
     try {
         $stmt = $pdo->prepare("INSERT INTO admins (id, username, password, email) VALUES (?, ?, ?, ?)");
-        $stmt->execute(['admin-1', 'admin', 'admin123', 'admin@processguide.com']);
+        $stmt->execute(['admin-1', 'TatamotorsSDC', 'sdc@2026', 'admin@processguide.com']);
         echo "   Admin inserted successfully!<br>";
     } catch (PDOException $e) {
         echo "   Error: " . $e->getMessage() . "<br>";
     }
 }
 ?>
+
