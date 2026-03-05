@@ -4,7 +4,8 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "startCommand": "npm run build && npm run preview",
+    "startCommand": "caddy run --config /assets/Caddyfile",
     "restartPolicyMaxRetries": 5
   }
 }
+
